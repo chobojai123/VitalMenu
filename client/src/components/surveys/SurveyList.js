@@ -8,7 +8,6 @@ class SurveyList extends Component {
   }
 
   onDeleteClick(id) {
-    console.log(id);
     this.props.deleteSurvey(id, this.props.fetchSurveys());
   }
 
@@ -47,7 +46,20 @@ class SurveyList extends Component {
   }
 
   render() {
-    return <div>{this.renderSurveys()}</div>;
+    return (
+      <div>
+        <div className="sort">
+          <div>
+            <span className="sortBy">Sort By:</span>
+            <button className="sortButtons">Date Sent</button>
+            <button className="sortButtons">Date Responded</button>
+            <button className="sortButtons">Yes</button>
+            <button className="sortButtons">No</button>
+          </div>
+        </div>
+        <div>{this.renderSurveys()}</div>
+      </div>
+    );
   }
 }
 
