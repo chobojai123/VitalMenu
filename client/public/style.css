@@ -149,6 +149,7 @@ a:active {
 
 .btn:link,
 .btn:visited,
+.btn,
 input[type=submit] {
     display:  inline-block;
     padding: 10px 30px;
@@ -161,6 +162,7 @@ input[type=submit] {
 
 .btn-full:link,
 .btn-full:visited,
+.btn-full,
 input[type=submit] {
     background-color: #e67e22;
     border: 1px solid #e67e22;
@@ -169,9 +171,11 @@ input[type=submit] {
 }
 
 .btn-ghost:link,
-.btn-ghost:visited {
+.btn-ghost:visited,
+.btn-ghost {
     border: 1px solid #e67e22;
     color: #e67e22;
+    background-color: transparent;
 }
 
 .btn:hover,

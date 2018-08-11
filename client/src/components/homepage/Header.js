@@ -45,6 +45,8 @@ class Header extends Component {
   }
 
   render() {
+    const plans = document.querySelector('#signup');
+    const features = document.querySelector('#features');
     return (
       // <nav>
       //   <div className="header nav-wrapper">
@@ -57,7 +59,19 @@ class Header extends Component {
       <div>
         <nav>
           <div className="row">
-            <img
+            <Link to={'/'} className="link">
+              <img
+                src="./images/megabytes-white.png"
+                alt="Megabytes Logo"
+                className="logo"
+              />
+              <img
+                src="./images/megabytes.png"
+                alt="Megabytes Logo"
+                className="logo-black"
+              />
+            </Link>
+            {/* <img
               src="./images/megabytes-white.png"
               alt="Megabytes Logo"
               className="logo"
@@ -66,7 +80,7 @@ class Header extends Component {
               src="./images/megabytes.png"
               alt="Megabytes Logo"
               className="logo-black"
-            />
+            /> */}
             <ul className="main-nav js--main-nav">{this.renderContent()}</ul>
             <a className="mobile-nav-icon js--nav-icon">
               <i className="ion-navicon-round" />
@@ -79,12 +93,22 @@ class Header extends Component {
             <br />
             Hello healthy meals.
           </h1>
-          <a className="btn btn-full js--scroll-to-plans" href="#">
+          <button
+            className="btn btn-full js--scroll-to-plans"
+            onClick={() =>
+              plans.scrollIntoView({ block: 'start', behavior: 'smooth' })
+            }
+          >
             I'm hungry
-          </a>
-          <a className="btn btn-ghost js-scroll-to-start" href="#">
+          </button>
+          <button
+            className="btn btn-ghost js--scroll-to-start"
+            onClick={() =>
+              features.scrollIntoView({ block: 'start', behavior: 'smooth' })
+            }
+          >
             Show me more
-          </a>
+          </button>
         </div>
       </div>
     );

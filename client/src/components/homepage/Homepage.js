@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import Header from './Header';
 import Features from './Features';
 import Meals from './Meals';
@@ -8,6 +7,7 @@ import Cities from './Cities';
 import Testimonials from './Testimonials';
 import Plans from './Plans';
 import Feedback from './Feedback';
+import Footer from './Footer';
 
 class Homepage extends Component {
   render() {
@@ -20,6 +20,8 @@ class Homepage extends Component {
         <Cities />
         <Testimonials />
         <Plans />
+        <Feedback />
+        <Footer />
       </div>
     );
   }

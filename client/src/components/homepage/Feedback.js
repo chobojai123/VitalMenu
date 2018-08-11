@@ -7,10 +7,10 @@ const Feedback = () => {
         <h2>We're happy to hear from you</h2>
       </div>
       <div className="row">
-        <form method="post" action="#" className="contact-form">
+        <form method="post" action="# " className="contact-form">
           <div className="row">
             <div className="col span-1-of-3">
-              <label for="name">Name</label>
+              <label className="name">Name</label>
             </div>
             <div className="col span-2-of-3">
               <input
@@ -24,7 +24,7 @@ const Feedback = () => {
           </div>
           <div className="row">
             <div className="col span-1-of-3">
-              <label for="email">Email</label>
+              <label className="email">Email</label>
             </div>
             <div className="col span-2-of-3">
               <input
@@ -38,13 +38,16 @@ const Feedback = () => {
           </div>
           <div className="row">
             <div className="col span-1-of-3">
-              <label for="find-us">How did you find us?</label>
+              <label className="find-us">How did you find us?</label>
             </div>
             <div className="col span-2-of-3">
-              <select name="find-us" id="find-us">
-                <option value="friends" selected>
-                  Friends
-                </option>
+              <select
+                name="find-us"
+                id="find-us"
+                value="Friends"
+                readOnly="true"
+              >
+                <option value="friends">Friends</option>
                 <option value="ad">Advertisement</option>
                 <option value="search">Search Engine</option>
                 <option value="other">Other</option>
@@ -56,8 +59,8 @@ const Feedback = () => {
               <label>Newsletter</label>
             </div>
             <div className="col span-2-of-3">
-              <input type="checkbox" name="news" id="news" checked /> Yes,
-              please
+              <input type="checkbox" name="news" id="news" defaultChecked />{' '}
+              Yes, please
             </div>
           </div>
           <div className="row">
@@ -81,3 +84,5 @@ const Feedback = () => {
     </section>
   );
 };
+
+export default Feedback;

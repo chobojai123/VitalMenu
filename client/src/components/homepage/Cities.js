@@ -24,7 +24,7 @@ const Cities = () => {
           </div>
           <div className="city-feature">
             <i className="ion-social-twitter icon-small" />
-            <a href="#">@MegaBytes_LA</a>
+            <a href="# ">@MegaBytes_LA</a>
           </div>
         </div>
         <div className="col span-1-of-4 box">
@@ -44,7 +44,7 @@ const Cities = () => {
           </div>
           <div className="city-feature">
             <i className="ion-social-twitter icon-small" />
-            <a href="#">@MegaBytes_SF</a>
+            <a href="# ">@MegaBytes_SF</a>
           </div>
         </div>
         <div className="col span-1-of-4 box">
@@ -64,7 +64,7 @@ const Cities = () => {
           </div>
           <div className="city-feature">
             <i className="ion-social-twitter icon-small" />
-            <a href="#">@MegaBytes_SEA</a>
+            <a href="# ">@MegaBytes_SEA</a>
           </div>
         </div>
         <div className="col span-1-of-4 box">
@@ -84,7 +84,7 @@ const Cities = () => {
           </div>
           <div className="city-feature">
             <i className="ion-social-twitter icon-small" />
-            <a href="#">@MegaBytes_SD</a>
+            <a href="# ">@MegaBytes_SD</a>
           </div>
         </div>
       </div>

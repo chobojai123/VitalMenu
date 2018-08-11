@@ -36,10 +36,10 @@ const Steps = () => {
             </p>
           </div>
 
-          <a href="#" className="btn-app">
+          <a href="# " className="btn-app">
             <img src="../images/download-app.svg" alt="App Store Button" />
           </a>
-          <a href="#" className="btn-app">
+          <a href="# " className="btn-app">
             <img
               src="../images/download-app-android.png"
               alt="Play Store Button"

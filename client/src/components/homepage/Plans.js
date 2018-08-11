@@ -38,7 +38,7 @@ const Plans = () => {
               </ul>
             </div>
             <div>
-              <a href="#" className="btn btn-full">
+              <a href="# " className="btn btn-full">
                 Sign up now
               </a>
             </div>
@@ -75,7 +75,7 @@ const Plans = () => {
               </ul>
             </div>
             <div>
-              <a href="#" className="btn btn-ghost">
+              <a href="# " className="btn btn-ghost">
                 Sign up now
               </a>
             </div>
@@ -109,7 +109,7 @@ const Plans = () => {
               </ul>
             </div>
             <div>
-              <a href="#" className="btn btn-ghost">
+              <a href="# " className="btn btn-ghost">
                 Sign up now
               </a>
             </div>

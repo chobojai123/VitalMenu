@@ -4,7 +4,6 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import * as actions from '../actions';
 
 import Homepage from './homepage/Homepage';
-import Landing from './Landing';
 import Dashboard from './Dashboard';
 import SurveyNew from './surveys/SurveyNew';
 
