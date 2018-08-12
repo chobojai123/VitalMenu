@@ -56,8 +56,9 @@ class Header extends Component {
       //     <ul className="right hide-on-med-and-down">{this.renderContent()}</ul>
       //   </div>
       // </nav>
-      <div>
-        <nav>
+      <div className="nav">
+        <div className="testing">
+          {/* <nav> */}
           <div className="row">
             <Link to={'/'} className="link">
               <img
@@ -71,22 +72,13 @@ class Header extends Component {
                 className="logo-black"
               />
             </Link>
-            {/* <img
-              src="./images/megabytes-white.png"
-              alt="Megabytes Logo"
-              className="logo"
-            />
-            <img
-              src="./images/megabytes.png"
-              alt="Megabytes Logo"
-              className="logo-black"
-            /> */}
             <ul className="main-nav js--main-nav">{this.renderContent()}</ul>
             <a className="mobile-nav-icon js--nav-icon">
               <i className="ion-navicon-round" />
             </a>
           </div>
-        </nav>
+          {/* </nav> */}
+        </div>
         <div className="hero-text-box">
           <h1>
             Goodbye unhealthy food.
