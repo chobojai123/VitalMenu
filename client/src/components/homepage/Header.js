@@ -41,9 +41,9 @@ class Header extends Component {
           <li key="4">
             <a href="#signup">Sign up</a>
           </li>,
-          // <li key="5">
-          //   <a href="/api/logout">Logout</a>
-          // </li>,
+          <li key="5">
+            <a href="/api/logout">Logout</a>
+          </li>,
         ];
     }
   }
@@ -75,25 +75,6 @@ class Header extends Component {
                 className="logo-black"
               />
             </Link>
-            <Dropdown>
-              <DropdownTrigger>
-                <button className="dropdown-icon js--nav-icon">
-                  <i className="ion-android-arrow-dropdown" />
-                </button>
-              </DropdownTrigger>
-              <DropdownContent>
-                <ul>
-                  <li>
-                    <a className="account" href="/logout">
-                      My Account
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/api/logout">Logout</a>
-                  </li>
-                </ul>
-              </DropdownContent>
-            </Dropdown>
             <ul className="main-nav js--main-nav">{this.renderContent()}</ul>
             <a className="mobile-nav-icon js--nav-icon">
               <i className="ion-navicon-round" />

@@ -16,13 +16,16 @@ class Homepage extends Component {
     return (
       <div>
         <Header />
+        <Waypoint
+          onEnter={() => {
+            document.querySelector('.navbar').classList.remove('sticky');
+          }}
+          topOffset="40px"
+        />
         <Features />
         <Waypoint
           onEnter={() => {
             document.querySelector('.navbar').classList.add('sticky');
-          }}
-          onLeave={() => {
-            document.querySelector('.navbar').classList.remove('sticky');
           }}
           topOffset="40px"
         />
