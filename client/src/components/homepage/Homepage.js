@@ -24,7 +24,7 @@ class Homepage extends Component {
           onLeave={() => {
             document.querySelector('.testing').classList.remove('sticky');
           }}
-          topOffset="60px"
+          topOffset="40px"
         />
         <Meals />
         <Steps />

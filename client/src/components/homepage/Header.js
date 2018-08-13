@@ -20,7 +20,7 @@ class Header extends Component {
             <a href="#cities">Our cities</a>
           </li>,
           <li key="4">
-            <a href="/auth/google">Login With Google</a>
+            <a href="/auth/google">Login</a>
           </li>,
         ];
       default:
@@ -45,6 +45,7 @@ class Header extends Component {
   }
 
   render() {
+    console.log(this.props.auth);
     const plans = document.querySelector('#signup');
     const features = document.querySelector('#features');
     return (
@@ -58,7 +59,6 @@ class Header extends Component {
       // </nav>
       <div className="nav">
         <div className="testing">
-          {/* <nav> */}
           <div className="row">
             <Link to={'/'} className="link">
               <img
@@ -77,7 +77,6 @@ class Header extends Component {
               <i className="ion-navicon-round" />
             </a>
           </div>
-          {/* </nav> */}
         </div>
         <div className="hero-text-box">
           <h1>
