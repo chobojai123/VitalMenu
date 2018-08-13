@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+import Dropdown, {
+  DropdownContent,
+  DropdownTrigger,
+} from 'react-simple-dropdown';
 // import Payments from './Payments';
 
 class Header extends Component {
@@ -37,15 +41,14 @@ class Header extends Component {
           <li key="4">
             <a href="#signup">Sign up</a>
           </li>,
-          <li key="5">
-            <a href="/api/logout">Logout</a>
-          </li>,
+          // <li key="5">
+          //   <a href="/api/logout">Logout</a>
+          // </li>,
         ];
     }
   }
 
   render() {
-    console.log(this.props.auth);
     const plans = document.querySelector('#signup');
     const features = document.querySelector('#features');
     return (
@@ -58,7 +61,7 @@ class Header extends Component {
       //   </div>
       // </nav>
       <div className="nav">
-        <div className="testing">
+        <div className="navbar">
           <div className="row">
             <Link to={'/'} className="link">
               <img
@@ -72,6 +75,25 @@ class Header extends Component {
                 className="logo-black"
               />
             </Link>
+            <Dropdown>
+              <DropdownTrigger>
+                <button className="dropdown-icon js--nav-icon">
+                  <i className="ion-android-arrow-dropdown" />
+                </button>
+              </DropdownTrigger>
+              <DropdownContent>
+                <ul>
+                  <li>
+                    <a className="account" href="/logout">
+                      My Account
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/api/logout">Logout</a>
+                  </li>
+                </ul>
+              </DropdownContent>
+            </Dropdown>
             <ul className="main-nav js--main-nav">{this.renderContent()}</ul>
             <a className="mobile-nav-icon js--nav-icon">
               <i className="ion-navicon-round" />

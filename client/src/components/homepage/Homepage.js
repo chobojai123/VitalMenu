@@ -19,10 +19,10 @@ class Homepage extends Component {
         <Features />
         <Waypoint
           onEnter={() => {
-            document.querySelector('.testing').classList.add('sticky');
+            document.querySelector('.navbar').classList.add('sticky');
           }}
           onLeave={() => {
-            document.querySelector('.testing').classList.remove('sticky');
+            document.querySelector('.navbar').classList.remove('sticky');
           }}
           topOffset="40px"
         />

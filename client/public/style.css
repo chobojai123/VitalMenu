@@ -248,13 +248,16 @@ input[type=submit]:active {
 }
 
 /* main navi */
-.main-nav {
+.main-nav,
+.dropdown
+ {
     margin-top: 50px;
     float: right;
     list-style: none;
 }
 
-.main-nav li {
+.main-nav li,
+.dropdown-icon {
     display: inline-block;
     margin-left: 40px;
 }
@@ -272,7 +275,7 @@ input[type=submit]:active {
 }
 
 .main-nav li a:hover,
-.main-nav li a:active {
+.main-nav li a:active,{
     border-bottom: 2px solid #e67e22;
 }
 
@@ -660,3 +663,45 @@ footer p {
 .js--wp-3.animated {
     opacity: 1;
 } */
+
+/* --------------- */
+/* DROP DOWN MENU */
+/* --------------- */
+
+.dropdown-icon {
+    background: transparent;
+    border: 0;
+}
+
+.dropdown__content {
+    display: none;
+    position: absolute;
+}
+
+.dropdown__content ul{
+    list-style: none;
+}
+
+.dropdown__content ul li a {
+    border: 0;
+    color: white;
+    font-size: 90%;
+    margin-left: 7px;
+}
+
+.dropdown--active .dropdown__content {
+    display: block;
+}
+
+.dropdown__trigger,
+.dropdown__trigger {
+    padding: 8px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: border-bottom 0.2s;
+    transition: border-bottom 0.2s;
+}
+
