@@ -4,6 +4,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import * as actions from '../actions';
 
 import Homepage from './homepage/Homepage';
+import Account from './homepage/Account';
 import Dashboard from './Dashboard';
 import SurveyNew from './surveys/SurveyNew';
 
@@ -17,7 +18,7 @@ class App extends Component {
       <BrowserRouter>
         <div className="container">
           <Route exact path="/" component={Homepage} />
-          <Route exact path="/surveys" component={Dashboard} />
+          <Route exact path="/account" component={Account} />
           <Route path="/surveys/new" component={SurveyNew} />
         </div>
       </BrowserRouter>

@@ -659,7 +659,6 @@ footer p {
 
 .main-info li {
     display: inline-block;
-    margin-left: 40px;
 }
 
 .accountLogOut {
@@ -670,15 +669,11 @@ footer p {
     border-radius: 200px !important;
     -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s !important;
     transition: background-color 0.2s, border 0.2s, color 0.2s !important;
-}
-
-.accountLogOut {
     background-color: #e67e22 !important;
     border: 1px solid #e67e22 !important;
     color: #fff !important;
     margin-right: 15px !important;
 }
-
 
 .accTitle {
     color: white;
@@ -689,6 +684,12 @@ footer p {
     letter-spacing: 1px;
 }
 
+.accTitle h2:after {
+    display: none;
+    background-color: none;
+    content: " ";
+}
+
 .accDetail {
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4)));
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
@@ -696,23 +697,18 @@ footer p {
     margin: 0 auto;
     padding: 20px 0;
     color: white;
+    /* text-align: center; */
 }
 
-.accTitle h2:after {
-    display: none;
-    background-color: none;
-    content: " ";
+.accDetail ul {
+    float: none;
+    display: inline-block;
+    list-style: none;
+    text-align: left;
 }
 
-.accName,
-.accEmail,
-.accCredits,
-.accPlan {
-    margin-right: 30px;
-}
-
-.col1 {
-    text-align: right;
+.accDetail ul li {
+    margin: 15px 25px;
 }
 
 /* --------------- */

@@ -1,7 +1,59 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import Payments from '../Payments';
 
 class AccountInfo extends Component {
+  renderContent() {
+    switch (this.props.auth) {
+      case null:
+        return [
+          <li key="1">
+            <span> </span>
+          </li>,
+          <li key="2">
+            <span> </span>
+          </li>,
+          <li key="3">
+            <span> </span>
+          </li>,
+          <li key="4">
+            <span> </span>
+          </li>,
+        ];
+      case false:
+        return [
+          <li key="1">
+            <span>N/A</span>
+          </li>,
+          <li key="2">
+            <span>N/A</span>
+          </li>,
+          <li key="3">
+            <span>N/A</span>
+          </li>,
+          <li key="4">
+            <span>N/A</span>
+          </li>,
+        ];
+      default:
+        return [
+          <li key="1">
+            <span>{this.props.auth.name}</span>
+          </li>,
+          <li key="2">
+            <span>{this.props.auth.email}</span>
+          </li>,
+          <li key="3">
+            <span>${this.props.auth.credits}</span>
+          </li>,
+          <li key="4">
+            <span>None</span>
+          </li>,
+        ];
+    }
+  }
+
   render() {
     return (
       <div className="account">
@@ -16,6 +68,9 @@ class AccountInfo extends Component {
             </Link>
             <ul className="main-info js--main-nav">
               <li>
+                <Payments />
+              </li>
+              <li>
                 <a className="accountLogOut" href="/api/logout">
                   Logout
                 </a>
@@ -28,36 +83,21 @@ class AccountInfo extends Component {
         </div>
         <div className="accDetail">
           <div className="row">
-            <div className="col span-1-of-2 col1">
-              <span className="accName">Name:</span>
-            </div>
-            <div className="col span-1-of-2">
-              <span>David Cheng</span>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col span-1-of-2 col1">
-              <span className="accEmail">Email:</span>
-            </div>
-            <div className="col span-1-of-2">
-              <span>David Cheng</span>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col span-1-of-2 col1">
-              <span className="accCredits">Credits:</span>
-            </div>
-            <div className="col span-1-of-2">
-              <span>David Cheng</span>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col span-1-of-2 col1">
-              <span className="accPlan">Current Plan:</span>
-            </div>
-            <div className="col span-1-of-2">
-              <span>David Cheng</span>
-            </div>
+            <ul>
+              <li>
+                <span>Name:</span>
+              </li>
+              <li>
+                <span>Email:</span>
+              </li>
+              <li>
+                <span>Credit:</span>
+              </li>
+              <li>
+                <span>Current Plan:</span>
+              </li>
+            </ul>
+            <ul>{this.renderContent()}</ul>
           </div>
         </div>
       </div>
@@ -65,4 +105,8 @@ class AccountInfo extends Component {
   }
 }
 
-export default AccountInfo;
+function mapStateToProps({ auth }) {
+  return { auth };
+}
+
+export default connect(mapStateToProps)(AccountInfo);

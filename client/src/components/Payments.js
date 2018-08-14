@@ -7,13 +7,15 @@ class Payments extends Component {
   render() {
     return (
       <StripeCheckout
-        name="Emaily"
-        description="$5 for 5 credits"
-        amount={500}
+        name="MegaBytes"
+        description="Add Credits To Account"
+        // amount={5000}
+        panelLabel="Add Credits"
+        image={'./images/megabytes.png'}
         token={token => this.props.handleToken(token)}
         stripeKey={process.env.REACT_APP_STRIPE_KEY}
       >
-        <button className="btn">Add Credits</button>
+        <button className="btn btn-full">Add Credits</button>
       </StripeCheckout>
     );
   }
