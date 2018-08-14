@@ -638,6 +638,82 @@ footer p {
     color: #517fe4;
 }
 
+/* --------------- */
+/* ACCOUNT */
+/* --------------- */
+
+.account {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(./images/healthy.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./images/healthy.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.main-info {
+    margin-top: 50px;
+    float: right;
+    list-style: none;
+}
+
+.main-info li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.accountLogOut {
+    display: inline-block !important;
+    padding: 10px 30px !important;
+    font-weight: 300 !important;
+    text-decoration: none !important;
+    border-radius: 200px !important;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s !important;
+    transition: background-color 0.2s, border 0.2s, color 0.2s !important;
+}
+
+.accountLogOut {
+    background-color: #e67e22 !important;
+    border: 1px solid #e67e22 !important;
+    color: #fff !important;
+    margin-right: 15px !important;
+}
+
+
+.accTitle {
+    color: white;
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.accDetail {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4)));
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    width: 40%;
+    margin: 0 auto;
+    padding: 20px 0;
+    color: white;
+}
+
+.accTitle h2:after {
+    display: none;
+    background-color: none;
+    content: " ";
+}
+
+.accName,
+.accEmail,
+.accCredits,
+.accPlan {
+    margin-right: 30px;
+}
+
+.col1 {
+    text-align: right;
+}
 
 /* --------------- */
 /* footer */

@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import Dropdown, {
-  DropdownContent,
-  DropdownTrigger,
-} from 'react-simple-dropdown';
+
 // import Payments from './Payments';
 
 class Header extends Component {
@@ -52,14 +49,6 @@ class Header extends Component {
     const plans = document.querySelector('#signup');
     const features = document.querySelector('#features');
     return (
-      // <nav>
-      //   <div className="header nav-wrapper">
-      //     <Link to={this.props.auth ? '/surveys' : '/'} className="brand-logo">
-      //       SurveyNation
-      //     </Link>
-      //     <ul className="right hide-on-med-and-down">{this.renderContent()}</ul>
-      //   </div>
-      // </nav>
       <div className="nav">
         <div className="navbar">
           <div className="row">

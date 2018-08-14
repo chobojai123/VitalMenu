@@ -10,6 +10,7 @@ import Testimonials from './Testimonials';
 import Plans from './Plans';
 import Feedback from './Feedback';
 import Footer from './Footer';
+import AccountInfo from './Account';
 
 class Homepage extends Component {
   render() {
@@ -36,6 +37,7 @@ class Homepage extends Component {
         <Plans />
         <Feedback />
         <Footer />
+        <AccountInfo />
       </div>
     );
   }
